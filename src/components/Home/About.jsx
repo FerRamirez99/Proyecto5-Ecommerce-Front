@@ -6,7 +6,7 @@ const About = () => {
     <section className="about">
         <Row>
             <Col md={6}>
-                <img src={img} alt=""/>
+                <img src={img} alt="Imagen about"/>
             </Col>
             <Col md={6} className="info">
                 <h2>Sobre nosotros</h2>

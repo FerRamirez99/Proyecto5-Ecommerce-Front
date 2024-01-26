@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useContext, useEffect, useState } from 'react';
 import ProductContext from '../../context/Products/ProductContext';
 import { Spinner } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const CarouselMobile = () => {
     const { getProductssurf, products } = useContext(ProductContext)
@@ -36,15 +37,17 @@ const CarouselMobile = () => {
                 (<div className='custom-carousel-mobile'>
                     <Slider {...settings}>
                         {products.map((item) => (
-                            <div key={item.id} className="card">
-                                <div className="top">
-                                    <img src={item.image} alt="Imagen producto" className='card-img-prod' />
+                            <Link key={item.id} to={`/surf/${item._id}`}>
+                                <div className="card">
+                                    <div className="top">
+                                        <img src={item.image} alt="Imagen producto" className='card-img-prod' />
+                                    </div>
+                                    <div className="info">
+                                        <h6>{item.name}</h6>
+                                        <p>$ {item.price}</p>
+                                    </div>
                                 </div>
-                                <div className="info">
-                                    <h6>{item.name}</h6>
-                                    <p>$ {item.price}</p>
-                                </div>
-                            </div>
+                            </Link>
                         ))}
                     </Slider>
                 </div>) : (<Spinner animation="border" />)}

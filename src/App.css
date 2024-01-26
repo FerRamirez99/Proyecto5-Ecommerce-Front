@@ -5,11 +5,12 @@
 body {
     background-color: #EEEEE7;
     color: #275E63;
+
 }
 /*NAVBAR*/
 header {
     background-color: #AAD2BA;
-    padding: 0 10px;
+    padding: 0 50px;
 }
 header img {
     width: 90px;
@@ -132,7 +133,7 @@ footer .copy {
 }
 /*CATEGORIES*/
 .categories {
-    padding: 25px 25px 50px 25px;
+    padding: 30px 180px;
     color: #275E63;
 }
 .categories h2 {
@@ -159,13 +160,16 @@ footer .copy {
 }
 /*DESTACADOS*/
 .destacados {
-    padding: 25px;
+    padding: 25px 100px;
     color: #275E63;
 }
 .destacados h2 {
     font-size: 46px;
     font-weight: 900;
     text-transform: uppercase;
+}
+.destacados a {
+    text-decoration: none;
 }
 .destacados .custom-carousel-mobile {
     display: none;
@@ -206,7 +210,7 @@ footer .copy {
 /*SERVICES*/
 .services {
     margin-top: 10px;
-    padding: 40px;
+    padding: 40px 60px;
     color: #275E63;
 }
 .services img {
@@ -580,6 +584,9 @@ footer .copy {
 /*----------------------------------------------------------------------------------*/
 /* ESTILOS MOBILE */
 @media only screen and (max-width: 600px){
+    header {
+        padding: 0 15px;
+    }
     footer .copy {
         margin-top: 30px;
     }
@@ -597,29 +604,43 @@ footer .copy {
         width: 80%;
     }
     /*Home*/
+    .welcome .carousel-inner img {
+        height: 60vh;
+    }
     .welcome .carousel-caption h1 {
         text-align: center;
     }
     .welcome .carousel-caption h5 {
         text-align: center;
+        font-size: 24px;
+    }
+    .categories {
+        padding: 20px;
     }
     .categories .col {
         margin-bottom: 10px;
+    }
+    .destacados {
+        padding: 0;
     }
     .destacados .custom-carousel {
         display: none;
     }
     .destacados .custom-carousel-mobile {
         display: block;
+        width: 100%;
     }
     .destacados .btn-outline-primary {
         margin-top: 30px;
     }
     .about {
-        height: 900px;
+        height: 170vh;
     }
     .about img {
         width: 100%;
+    }
+    .services {
+        padding: 20px;
     }
     .services img {
         height: 15vh;
@@ -678,7 +699,10 @@ footer .copy {
         width: 100%;
     }
     /*Contact*/
+    .contact .btn-primary {
+        width: 100%;
+    }
     .contact iframe {
-        width: auto;
+        width: 100%;
     }
 }
